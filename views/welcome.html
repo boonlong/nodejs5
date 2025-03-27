@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dodelete(id){
+            if(confirm("คุณต้องการลบข้อมูลรหัส "+ id +"ใช่หรือไม่")){
+                document.location='/del?mem_id='+id;
+            }
+        }
+    </script>
+    <img src="/admin1.png" alt="" srcset="">
+    <table>
+        <tr><th>id</th><th>name</th><th>user</th><th>pass</th><th></th>
+        </tr>
+    {{#r}}
+    <tr>
+        <td>{{mem_id}}</td>        <td>{{mem_name}}</td>
+        <td>{{mem_user}}</td>        <td>{{mem_pass}}</td>
+        <td><a href="/edit?mem_id={{mem_id}}">แก้ไข</a>
+            <a href="javascript:dodelete('{{mem_id}}');">ลบ</a></td>
+    </tr>
+    {{/r}}
+    <form action="/add" method="post">
+    <tr>
+        <td>+</td><td><input type="text" name="mem_name" id="t1"></td>
+        <td><input type="text" name="mem_user" id="t2"></td>
+        <td><input type="text" name="mem_pass" id="t3"></td>
+        <td><button type="submit">add</button></td>
+    </tr>
+    </form>
+    </table>
+</body>
+</html>

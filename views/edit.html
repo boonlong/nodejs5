@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{#r}}
+    <h1>แก้ไข {{mem_id}}</h1>
+    <form action="/save?mem_id={{mem_id}}" method="post">
+        <table align="center" border="1">
+            <tr><td>name</td>
+                <td><input type="text" name="mem_name" id="f1" value="{{mem_name}}"></td></tr>
+            <tr><td>user</td>
+                <td><input type="text" name="mem_user" id="f2" value="{{mem_user}}"></td></tr>
+            <tr><td>pass</td>
+                <td><input type="text" name="mem_pass" id="f3" value="{{mem_pass}}"></td></tr>
+            <tr><td colspan="2"><button class="bt1" type="submit">บันทึก</button></td></tr>
+        </table>
+    </form>
+    {{/r}}
+    <style>
+        .bt1:hover{background-color: chartreuse;}
+        .bt1{background-color: darkorange;}
+    </style>
+</body>
+</html>
