@@ -14,6 +14,22 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumping database structure for webdb
+DROP DATABASE IF EXISTS `webdb`;
+CREATE DATABASE IF NOT EXISTS `webdb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+USE `webdb`;
+
+-- Dumping structure for table webdb.member
+DROP TABLE IF EXISTS `member`;
+CREATE TABLE IF NOT EXISTS `member` (
+  `mem_id` int(11) NOT NULL AUTO_INCREMENT,
+  `mem_name` varchar(50) NOT NULL DEFAULT '',
+  `mem_user` varchar(50) NOT NULL DEFAULT '',
+  `mem_pass` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`mem_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- Data exporting was unselected.
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
